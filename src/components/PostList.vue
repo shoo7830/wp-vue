@@ -15,9 +15,9 @@
 import 'expose-loader?$!expose-loader?jQuery!jquery'
 export default {
   name: 'post-list',
-  data: () => ({
-    postlists: []
-  }),
+  data: function () {
+   return {postlists: []}
+  },
 
   // data: function () {
 	// 	return {

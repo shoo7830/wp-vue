@@ -25,13 +25,13 @@
                         <p class="product-type"> {{ productlist.producttype }}</p>
                         <p class="discount" v-if="selected >= 12">
                             <span>16.6%할인</span>
-                            <span><s>{{ productlist.price*selected }}원</s></span>
+                            <span><s>{{ (productlist.price*selected).toLocaleString('ko') }}원</s></span>
                         </p>
                         <p class="price" v-if="selected >= 12">
-                            {{ Math.ceil((productlist.price*selected)  - (productlist.price*selected*0.1666666666667))}}원
+                            {{ (Math.ceil((productlist.price*selected)  - (productlist.price*selected*0.1666666666667))).toLocaleString('ko')}}원
                         </p>
                         <p class="price" v-else>
-                            {{ productlist.price*selected }}원
+                            {{ (productlist.price*selected).toLocaleString('ko') }}원
                         </p>
                         <button role="button">신청하기</button>
                     </td>

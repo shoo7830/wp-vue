@@ -24,49 +24,18 @@ export default {
   mounted: function () {
     var self = this;
     $.ajax({
-        url: 'http://webholic.net/api/get_recent_posts/?count=4',
-        method: 'GET',
-        success: function (response) {
-            self.postlists = response.posts;
-        },
-        error: function (error) {
-            alert(JSON.stringify(error));
-        }
-    });
-  }
-
-  // Fetches posts when the component is created.
-  // created() {
-  //   axios.get(`http://webholic.net/api/get_recent_posts/?count=4`)
-  //   .then(response => {
-  //     // JSON responses are automatically parsed.
-  //     this.postlists = response.data.posts
-  //   })
-  //   .catch(e => {
-  //     this.errors.push(e)
-  //   })
-    
-  // }
-
-    
-}
-
-
-
-  var postlists;
-
-  $.ajax({
       url: 'http://webholic.net/api/get_recent_posts/?count=4',
       method: 'GET',
       success: function (response) {
-          this.postlists = response.posts;
-          //alert(JSON.stringify(data));
-          //console.log(postlists)
+          self.postlists = response.posts
       },
       error: function (error) {
-          alert(JSON.stringify(error));
+          alert(JSON.stringify(error))
       }
-  });
+    })
+  }
+}
+
 </script>
 
 <style lang="scss">

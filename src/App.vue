@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <post-list></post-list>
+    <!-- <post-list></post-list> -->
+    <product-list></product-list>
   </div>
 </template>
 
 <script>
-import PostList from './components/PostList';
+//import PostList from './components/PostList';
+import ProductList from './components/ProductList';
 
 export default {
   components: {
-    PostList
+    // PostList
+    ProductList
   }
 }
 </script>

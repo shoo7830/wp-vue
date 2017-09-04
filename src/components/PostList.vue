@@ -11,7 +11,7 @@
   </div>
 </template>
 <script>
-// import axios from 'axios'
+
 import 'expose-loader?$!expose-loader?jQuery!jquery'
 export default {
   name: 'post-list',

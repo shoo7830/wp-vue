@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    
+
     <div>
         <table class="product-table">
             <colgroup>
@@ -17,7 +17,7 @@
                         <select v-model="selected">
                             <option v-for="option in options" v-bind:value="option.value">
                                 {{ option.text }}
-                            </option>     
+                            </option>
                         </select>
                     </th>
                     <!-- loop 돌릴 부분 -->
@@ -33,7 +33,7 @@
                         <p class="price" v-else>
                             {{ (productlist.price*selected).toLocaleString('ko') }}원
                         </p>
-                        <button role="button">신청하기</button>
+                        <gt-button></gt-button>
                     </td>
                 </tr>
                 <tr>
@@ -94,11 +94,15 @@
 </template>
 
 <script>
+import GtButton from './units/GtrisButton';
 export default {
+  components: {
+      GtButton
+  },
   name: 'product-list',
-  
+
   data: function () {
-   return { 
+   return {
     title: '기업형',
     selected: 12,
     options: [
@@ -107,7 +111,7 @@ export default {
         {text: '12개월', value: 12},
         {text: '24개월', value: 24}
     ],
-    productlists: 
+    productlists:
     [
       {producttype: '스탠더드', price: 15000},
       {producttype: '스탠더드 무제한', price: 20000},
@@ -136,8 +140,7 @@ h1 {
         }
     }
     th {
-        
+
     }
 }
 </style>
-

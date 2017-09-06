@@ -1,5 +1,5 @@
 <template>
-  	<button type="button" name="button">
+  	<button class="gt-button">
   		<slot></slot>
 		신청하기
   	</button>
@@ -10,3 +10,6 @@ export default {
   name: 'gt-button'
 }
 </script>
+
+<style lang="scss">
+</style>

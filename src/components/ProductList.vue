@@ -28,7 +28,7 @@
                             <span><s>{{ (productlist.price*selected).toLocaleString('ko') }}원</s></span>
                         </p>
                         <p class="price" v-if="selected >= 12">
-                            {{ (Math.ceil((productlist.price*selected)  - (productlist.price*selected*0.1666666666667))).toLocaleString('ko')}}원
+                            {{ (Math.ceil((productlist.price*selected)  - (productlist.price*selected*0.1666666666667))).toLocaleString('ko') }}원
                         </p>
                         <p class="price" v-else>
                             {{ (productlist.price*selected).toLocaleString('ko') }}원

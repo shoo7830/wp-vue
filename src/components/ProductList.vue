@@ -90,14 +90,17 @@
             </tbody>
         </table>
     </div>
+    <gt-paging></gt-paging>
   </div>
 </template>
 
 <script>
 import GtButton from './units/GtrisButton';
+import GtPaging from './units/GtrisPaging'
 export default {
   components: {
-      GtButton
+      GtButton,
+      GtPaging
   },
   name: 'product-list',
 
